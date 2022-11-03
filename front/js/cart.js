@@ -39,7 +39,7 @@ function affichagePanier(index) {
       }
       affiche(panier);
     } else {
-        // si il n'y a pas de panier on créait un H1 informatif et quantité appropriées
+        // ------------------- si il n'y a pas de panier on créait un H1 informatif et quantité appropriées
         document.querySelector("#totalQuantity").innerHTML = "0";
         document.querySelector("#totalPrice").innerHTML = "0";
         document.querySelector("h1").innerHTML =
@@ -81,7 +81,7 @@ function affiche(indexé) {
     totalProduit();
   }
 
-// fonction modifQuantité on modifie dynamiquement les quantités du panier
+// -----------------------fonction modifQuantité on modifie dynamiquement les quantités du panier
 
   function modifQuantité() {
     const cart = document.querySelectorAll(".cart__item");
@@ -107,7 +107,7 @@ function affiche(indexé) {
     });
   }
 
-  // fonction supression on supprime un article dynamiquement du panier et donc de l'affichage
+  //---------------------- fonction supression on supprime un article dynamiquement du panier et donc de l'affichage
 
   function suppression() {
     // déclaration de variables
@@ -230,10 +230,12 @@ if (page.match("cart")) {
         contactClient.regexNormal = 3;
       } else {
         contactClient.regexNormal = 0;
+        
       }
       localStorage.contactClient = JSON.stringify(contactClient);
       couleurRegex(regNormal, valeur, regexTexte);
       valideClic();
+      console.log(isValide)
     })
   );
 }
